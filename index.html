@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Classes in JS</title>
+    </head>
+    <body>
+        <h1>Classes in JS</h1>
+        <p id="student1"></p>
+        <p id="student2"></p>
+        <script>
+            class Student {
+                constructor(name, year) {
+                    this.name = name;
+                    this.year = year;
+                }
+
+                // Calculate the age based on the year of birth
+                age() {
+                    let date = new Date(); // Get the current date
+                    return date.getFullYear() - this.year; // Subtract the year of birth from the current year to get the age
+                }
+            }
+
+            const student1 = new Student("Peter", 2009); // Create an object of the class Student
+            document.getElementById("student1").innerHTML = 
+                "Name: " + student1.name + "<br>Year of Birth: " + student1.year + "<br>Age: " + student1.age(); // Display the name, year of birth, and age of the student
+        </script>
+    </body>
+</html>
